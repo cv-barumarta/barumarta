@@ -14,6 +14,10 @@
         box-sizing: border-box;
         color: #333;
         background-image: url("backgroundall.png");
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
     }
 
     a  {
@@ -251,7 +255,6 @@
 
 </style>
 <body>
-
     <!-- Navbar -->
     <header class="navbar">
         <div class="container">
@@ -306,6 +309,19 @@
             <p>&copy; 2024 CV. BARUMARTA. All rights reserved.</p>
         </div>
     </footer>
+
+    <script>
+        document.addEventListener('keydown', function(e) {
+            if (e.ctrlKey && (e.key === 'c' || e.key === 'u' || e.key === 's')) {
+                e.preventDefault();
+            }
+        });
+    </script>
+    <script>
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+    </script>
 
 </body>
 </html>
