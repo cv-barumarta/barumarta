@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>produk - CV. BARUMARTA</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<style>
+    body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #333;
+    background-color: #f4f4f9;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    max-width: 1200px;
+    margin-top: 0px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #6666ff;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar .logo a {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.navbar nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar nav ul li a {
+    color: #fff;
+    font-weight: 400;
+}
+
+.navbar nav ul li a:hover, .navbar nav ul li a.active {
+    color: #f9a825;
+}
+.logo {
+    display: flex;
+    align-items: center; /* Agar logo dan teks sejajar secara vertikal */
+}
+
+.logo img {
+    height: 50px; /* Atur ukuran tinggi logo */
+    margin-right: 10px; /* Beri jarak antara logo dan teks */
+}
+
+.logo span {
+    font-size: 24px; /* Ukuran teks CV. BARUMARTA */
+    font-weight: 600; /* Tebalkan teks */
+    color: #fff; /* Warna teks putih, sesuai dengan navbar */
+}
+
+
+.produk {
+    padding: 10px 0;
+    text-align: center;
+    background-image: url("backgroundall.png"); /* Pastikan path relatif ke gambar */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+}
+
+.produk h1 {
+    font-size: 36px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color: black; /* Mengatur warna teks menjadi hitam */
+    font-weight: bold; /* Menebalkan teks */
+}
+
+.produk p {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: black; /* Mengatur warna teks menjadi hitam */
+    font-weight: bold; /* Menebalkan teks */
+}
+
+/* produk Grid */
+.produk-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+}
+
+.produk-item {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.produk-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+
+.produk-item p {
+    padding: 0 20px;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.produk-item:hover {
+    transform: translateY(-10px);
+}
+
+.produk-item img:hover {
+    transform: scale(1.1);
+}
+
+/* Footer */
+.footer {
+    background-color: #6666ff;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+@media (max-width: 768px) {
+    .navbar {
+        padding: 4px; /* Kurangi padding di layar kecil */
+    }
+
+    .navbar nav ul {
+        gap: 10px; /* Kurangi jarak antar item */
+        justify-content: center; /* Pusatkan elemen navbar */
+        flex-direction: row; /* Tetap horizontal di layar kecil */
+    }
+
+    .navbar nav ul li a {
+        font-size: 14px; /* Sesuaikan ukuran font untuk layar kecil */
+        padding: 5px 1px; /* Kurangi padding untuk menjaga proporsi */
+    }
+    .container {
+        max-width: 768px;
+        margin-top: 0px;
+        padding: 0 10px;
+    }
+
+    .container h1{
+        font-size: 18px;
+    }
+    .container p{
+        font-size: 14px;
+    }
+
+    .produk-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 5px;
+    }
+    .footer {
+        background-color: #6666ff;
+        color: #fff;
+        text-align: center;
+        padding: 5px 0;
+        margin-top: 0px;
+    }
+    .footer p {
+        margin-top: 0px;
+    }
+}
+</style>
+<body>
+
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="Logo1.png" alt="index.html" class="logo-img">
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="about.html">Tentang Kami</a></li>
+                    <li><a href="services.html">Layanan</a></li>
+                    <li><a href="contact.html">Kontak</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- produk Section -->
+    <section id="produk" class="produk">
+        <div class="container">
+            <h1>Produk Kami</h1>
+            <p>Berikut adalah beberapa karya terbaik kami yang menunjukkan komitmen terhadap kualitas dan inovasi dalam industri garmen.</p>
+
+            <!-- produk Grid -->
+            <div class="produk-grid">
+                <div class="produk-item">
+                    <img src="dress.png" alt="Produk Garmen 1">
+                </div>
+                <div class="produk-item">
+                    <img src="hoodie.png" alt="Produk Garmen 2">
+                </div>
+                <div class="produk-item">
+                    <img src="workwear.png" alt="Produk Garmen 3">
+                </div>
+                <div class="produk-item">
+                    <img src="manshirt.png" alt="Produk Garmen 4">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 CV. BARUMARTA. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
+
