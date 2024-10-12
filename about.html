@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tentang Kami - CV. BARUMARTA</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<style>
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 50;
+    box-sizing: border-box;
+    color: #333;
+    background-image: url("backgroundall.png"); /* Pastikan path relatif ke gambar */
+    background-size: cover;
+    background-position: center;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    align-content: flex-start;
+    margin-left: 0px;
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+    }
+
+    .logo img {
+        height: 50px;
+        margin-right: 10px;
+    }
+
+    .logo span {
+        font-size: 24px;
+        font-weight: 600;
+        color: #fff;
+    }
+
+
+    .navbar {
+    background-color: #6666ff;
+    padding: 5px 0;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    justify-content: space-between;
+    align-items: center;
+    }
+
+    .navbar nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Tetap flex untuk mempertahankan arah horizontal */
+    gap: 20px; /* Jarak antar elemen */
+    align-items: center;
+    }
+
+    .navbar nav ul li {
+    list-style: none;
+    }
+
+    .navbar nav ul li a {
+    color: #fff;
+    font-weight: 400;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+    }
+
+/* Tentang Kami Section */
+.about {
+    
+    padding: 10px 0;
+    color: black; /* Mengatur warna teks menjadi hitam */
+    font-weight: bold; /* Menebalkan teks */
+    
+}
+
+.about-header {
+    margin-top: 0px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.about-header h1 {
+    font-size: 30px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color: black; /* Mengatur warna teks menjadi hitam */
+    font-weight: bold; /* Menebalkan teks */
+}
+
+.about-header p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #555;
+    color: black; /* Mengatur warna teks menjadi hitam */
+    font-weight: bold; /* Menebalkan teks */
+}
+
+/* Tentang Kami Content */
+.about-content {
+    display: flex; /* Set to flex to allow side-by-side layout */
+    justify-content: space-between; /* Create space between text and images */
+    align-items: flex-start; /* Align items at the start */
+    color: black; /* Mengatur warna teks menjadi hitam */
+    font-weight: bold; /* Menebalkan teks */
+}
+
+.about-text {
+    flex: 1; /* Allow text section to take available space */
+    margin-right: 20px; /* Add some space between text and images */
+    color: black; /* Mengatur warna teks menjadi hitam */
+    font-weight: bold; /* Menebalkan teks */
+}
+
+.about-images {
+    display: flex; /* Align images in a column */
+    flex-direction: column; /* Arrange images vertically */
+    align-items: flex-start; /* Align images to the start */
+}
+
+.about-image {
+    margin-bottom: 20px; /* Space between images */
+}
+
+.about-image img {
+    border-radius: 10px;
+    max-width: 400px; /* Adjust max-width as needed for image size */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.about-text h1 {
+    font-size: 15px;
+    margin-bottom: 5px;
+    color: black; /* Mengatur warna teks menjadi hitam */
+    font-weight: bold; /* Menebalkan teks */
+}
+
+.about-text h2 {
+    font-size: 30px;
+    margin-bottom: 5px;
+    color: black; /* Mengatur warna teks menjadi hitam */
+    font-weight: bold; /* Menebalkan teks */
+}
+
+.about-text p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: black; /* Mengatur warna teks menjadi hitam */
+    font-weight: bold; /* Menebalkan teks */
+}
+
+
+.about-values {
+    text-align: center;
+    margin-bottom: 10px;
+    color: black; /* Mengatur warna teks menjadi hitam */
+    font-weight: bold; /* Menebalkan teks */
+    
+}
+
+.about-values h2 {
+    font-size: 30px;
+    margin-bottom: 10px;
+    color: black; /* Mengatur warna teks menjadi hitam */
+    font-weight: bold; /* Menebalkan teks */
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+}
+
+.value-item {
+    background-color: rgba(250, 250, 252, 0.3); /* Warna background transparan */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    color: black; /* Mengatur warna teks menjadi hitam */
+    font-weight: bold; /* Menebalkan teks */
+}
+
+.value-item h3 {
+    font-size: 24px;
+    margin-bottom: 5px;
+    color: black; /* Mengatur warna teks menjadi hitam */
+    font-weight: bold; /* Menebalkan teks */
+}
+
+.value-item p {
+    font-size: 16px;
+    line-height: 1.4;
+    color: black; /* Mengatur warna teks menjadi hitam */
+    font-weight: bold; /* Menebalkan teks */
+}
+
+/* Visi dan Misi Section */
+.about-vision-mission {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 5px;
+    color: black; /* Mengatur warna teks menjadi hitam */
+    font-weight: bold; /* Menebalkan teks */
+}
+
+.vision-mission-content {
+    flex: 1;
+}
+
+.vision-mission-content h2 {
+    font-size: 30px;
+    margin-bottom: 5px;
+}
+
+.vision-mission-content p, .vision-mission-content ul {
+    font-size: 18px;
+    line-height: 1.4;
+}
+
+.vision-mission-content ul {
+    padding-left: 20px;
+    list-style: disc;
+}
+
+/* Footer */
+.footer {
+    background-color: #6666ff;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+@media (max-width: 768px) {
+    .navbar {
+        padding: 4px; /* Kurangi padding di layar kecil */
+    }
+
+    .navbar nav ul {
+        gap: 10px; /* Kurangi jarak antar item */
+        justify-content: center; /* Pusatkan elemen navbar */
+        flex-direction: row; /* Tetap horizontal di layar kecil */
+    }
+
+    .navbar nav ul li a {
+        font-size: 14px; /* Sesuaikan ukuran font untuk layar kecil */
+        padding: 5px 1px; /* Kurangi padding untuk menjaga proporsi */
+    }
+    .about {
+    
+    padding: 20px 0;
+    color: black; /* Mengatur warna teks menjadi hitam */
+    font-weight: bold; /* Menebalkan teks */
+    
+}
+
+.about-header {
+    text-align: center;
+    margin-bottom: 0px;
+}
+
+.about-header h1 {
+    font-size: 16px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color: black; /* Mengatur warna teks menjadi hitam */
+    font-weight: bold; /* Menebalkan teks */
+}
+
+
+
+/* Tentang Kami Content */
+.about-content {
+    display: block; /* Set to flex to allow side-by-side layout */
+    justify-content: space-between; /* Create space between text and images */
+    align-items: flex-start; /* Align items at the start */
+    color: black; /* Mengatur warna teks menjadi hitam */
+    font-weight: bold; /* Menebalkan teks */
+}
+
+.about-text {
+    flex: 0; /* Allow text section to take available space */
+    margin-right: 0px; /* Add some space between text and images */
+    color: black; /* Mengatur warna teks menjadi hitam */
+    font-weight: bold; /* Menebalkan teks */
+}
+
+.about-images {
+    display: flex; /* Align images in a column */
+    flex-direction: row; /* Arrange images vertically */
+    align-items: center; /* Align images to the start */
+    gap: 10px; /* Jarak antar gambar */
+}
+
+.about-image {
+    margin-bottom: 5px; /* Space between images */
+}
+
+.about-image img {
+    border-radius: 5px;
+    max-width: 100px; /* Adjust max-width as needed for image size */
+    height: auto; /* Maintain aspect ratio */
+}
+
+
+.about-text h1 {
+    font-size: 14px;
+    margin-bottom: 0px;
+    color: black; /* Mengatur warna teks menjadi hitam */
+    font-weight: bold; /* Menebalkan teks */
+}
+
+.about-text h2 {
+    font-size: 18px;
+    margin-bottom: 0px;
+    color: black; /* Mengatur warna teks menjadi hitam */
+    font-weight: bold; /* Menebalkan teks */
+}
+
+.about-text p {
+    margin-top: 0px;
+    font-size: 14px;
+    line-height: 1.1;
+    color: black; /* Mengatur warna teks menjadi hitam */
+    font-weight: bold; /* Menebalkan teks */
+}
+.about-values {
+    text-align: center;
+    margin-bottom: 5px;
+    color: black; /* Mengatur warna teks menjadi hitam */
+    font-weight: bold; /* Menebalkan teks */
+    
+}
+
+.about-values h2 {
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: black; /* Mengatur warna teks menjadi hitam */
+    font-weight: bold; /* Menebalkan teks */
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 5px;
+}
+
+.value-item {
+    background-color: rgba(250, 250, 252, 0.3); /* Warna background transparan */
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    color: black; /* Mengatur warna teks menjadi hitam */
+    font-weight: bold; /* Menebalkan teks */
+}
+
+.value-item h3 {
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: black; /* Mengatur warna teks menjadi hitam */
+    font-weight: bold; /* Menebalkan teks */
+}
+
+.value-item p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: black; /* Mengatur warna teks menjadi hitam */
+    font-weight: bold; /* Menebalkan teks */
+}
+
+.about-vision-mission {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 0px;
+    color: black; /* Mengatur warna teks menjadi hitam */
+    font-weight: bold; /* Menebalkan teks */
+}
+
+.vision-mission-content {
+    flex: 1;
+}
+
+.vision-mission-content h2 {
+    font-size: 18px;
+    margin-bottom: 0px;
+}
+
+.vision-mission-content p, .vision-mission-content ul {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.vision-mission-content ul {
+    padding-left: 5px;
+    list-style: disc;
+}
+
+    .container {
+            padding: 0 10px;
+        }
+
+    .footer p {
+        margin-top: 0px;
+        }
+}
+    </style>
+</head>
+<body>
+    <header class="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="Logo1.png" alt="index.html" class="logo-img">
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="services.html">Layanan</a></li>
+                    <li><a href="produk.html">Produk</a></li>
+                    <li><a href="contact.html">Kontak</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Tentang Kami Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-header">
+                <h1>Kami adalah perusahaan garmen yang berdedikasi untuk memberikan kualitas dan inovasi di setiap produk yang kami buat. Dengan tim profesional, kami melayani berbagai klien dari berbagai industri.</h1>
+            </div>
+
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Sejarah Kami</h2>
+                    <p>Kami adalah perusahaan garmen yang berdedikasi untuk memberikan kualitas dan inovasi di setiap produk yang kami buat. Dengan tim profesional, kami melayani berbagai klien dari berbagai industri.</p>
+                    <p>CV. BARUMARTA, perusahaan garmen yang baru hadir di industri garmen. Kami dengan bangga menawarkan beragam produk berkualitas tinggi, mulai dari pakaian kasual hingga busana formal, yang dirancang untuk memenuhi kebutuhan dan preferensi pelanggan kami. Didirikan oleh tim profesional yang berpengalaman di bidang garmen, CV. BARUMARTA bertujuan untuk menjadi jembatan antara produsen dan konsumen dengan menghadirkan koleksi terbaru yang tidak hanya trendi, tetapi juga nyaman dan terjangkau.</p>
+                    <p>Kami percaya bahwa setiap individu memiliki gaya unik dan oleh karena itu kami menyediakan berbagai pilihan yang dapat disesuaikan dengan selera masing-masing. Dengan komitmen kami terhadap kualitas, inovasi, dan layanan pelanggan yang unggul, kami berusaha untuk menciptakan pengalaman yang menyenangkan dan memuaskan. Di CV. BARUMARTA, kami tidak hanya menjual produk, tetapi juga menjalin hubungan yang erat dengan pelanggan kami, memastikan bahwa setiap pembelian menjadi langkah menuju gaya hidup yang lebih baik.</p>
+                    <p>Kami mengundang Anda untuk menjelajahi koleksi kami dan menemukan inspirasi baru dalam dunia fashion. Terima kasih telah memilih CV. BARUMARATA sebagai mitra garmen Anda!</p>
+                </div>
+                
+                <div class="about-images"> <!-- Container for images -->
+                    <div class="about-image">
+                        <img src="meeting.png" alt="Sejarah Perusahaan Garmen">
+                    </div>
+                    <div class="about-image">
+                        <img src="meeting1.png" alt="Sejarah Perusahaan Garmen">
+                    </div>
+                    <div class="about-image">
+                        <img src="meeting2.png" alt="Sejarah Perusahaan Garmen">
+                    </div>
+                </div>
+            </div>
+            
+
+            <div class="about-values">
+                <h2>Nilai-Nilai Kami</h2>
+                <div class="values-grid">
+                    <div class="value-item">
+                        <h3>Kualitas</h3>
+                        <p>Kami selalu menempatkan kualitas sebagai prioritas utama dalam setiap produk yang kami buat, menggunakan bahan terbaik dan proses kontrol kualitas yang ketat.</p>
+                    </div>
+                    <div class="value-item">
+                        <h3>Inovasi</h3>
+                        <p>Kami terus berinovasi, baik dalam teknologi produksi maupun desain, untuk memastikan produk kami selalu mengikuti tren dan kebutuhan pasar.</p>
+                    </div>
+                    <div class="value-item">
+                        <h3>Keberlanjutan</h3>
+                        <p>Kami berkomitmen pada praktik bisnis yang berkelanjutan dan ramah lingkungan, dengan fokus pada pengurangan limbah dan penggunaan bahan yang lebih eco-friendly.</p>
+                    </div>
+                    <div class="value-item">
+                        <h3>Komitmen Pelanggan</h3>
+                        <p>Kepuasan pelanggan adalah tujuan utama kami, dan kami selalu berusaha memberikan pelayanan terbaik dan solusi garmen yang tepat bagi setiap klien.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="about-vision-mission">
+                <div class="vision-mission-content">
+                    <h2>Visi Kami</h2>
+                    <p>Menjadi inspirasi dalam industri garmen dengan inovasi produk berkualitas yang mendukung gaya hidup modern dan ramah lingkungan.</p>
+                </div>
+                <div class="vision-mission-content">
+                    <h2>Misi Kami</h2>
+                    <ul>
+                        <li>Memproduksi pakaian berkualitas tinggi yang memenuhi standar global.</li>
+                        <li>Mengutamakan keberlanjutan dalam setiap proses produksi.</li>
+                        <li>Melayani pelanggan dengan solusi desain dan produk yang disesuaikan.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 CV. BARUMARTA. All rights reserved.</p>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('keydown', function(e) {
+            if (e.ctrlKey && (e.key === 'c' || e.key === 'u' || e.key === 's')) {
+                e.preventDefault();
+            }
+        });
+    </script>
+    <script>
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+    </script>
+
+</body>
+</html>
