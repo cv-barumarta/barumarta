@@ -243,5 +243,20 @@
             e.preventDefault();
         });
     </script>
+    <script>
+    import { initializeApp } from "firebase/app";
+    import { getAnalytics } from "firebase/analytics";
+    const firebaseConfig = {
+      apiKey: "AIzaSyAailAsaXQR3kev-TtcMQJAXoPAeFtHGns",
+      authDomain: "barumarta-1ec14.firebaseapp.com",
+      projectId: "barumarta-1ec14",
+      storageBucket: "barumarta-1ec14.appspot.com",
+      messagingSenderId: "220663558055",
+      appId: "1:220663558055:web:630bf014f0cf2f3535d082",
+      measurementId: "G-K3QD0BX9T8"
+    };
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+    </script>
 </body>
 </html>
