@@ -1,0 +1,20 @@
+name: Update Repository Automatically
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  update_repo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      
+      - name: Run update commands
+        run: |
+          git pull origin main
+          git add .
+          git commit -m "Automatic update"
+          git push origin main
