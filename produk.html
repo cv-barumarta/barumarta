@@ -10,10 +10,13 @@
     body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
-    padding: 0;
+    padding: 0px;
     box-sizing: border-box;
     color: #333;
     background-color: #f4f4f9;
+    background-size: cover;
+    background-position: center;
+    padding-top: 0px;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -27,57 +30,60 @@ a {
 
 .container {
     max-width: 1200px;
-    margin-top: 0px;
     margin: 0 auto;
-    padding: 0 10px;
-}
+    padding: 0 20px;
+    align-content: flex-start;
+    margin-left: 0px;
+    }
 
-/* Navbar */
-.navbar {
+    .logo {
+        display: flex;
+        align-items: center;
+    }
+
+    .logo img {
+        height: 50px;
+        margin-right: 10px;
+    }
+
+    .logo span {
+        font-size: 24px;
+        font-weight: 600;
+        color: #fff;
+    }
+
+
+    .navbar {
     background-color: #6666ff;
-    padding: 15px 0;
+    padding: 5px 0;
     position: sticky;
     top: 0;
+    left: 0;
     z-index: 1000;
-}
+    justify-content: space-between;
+    align-items: center;
+    }
 
-.navbar .logo a {
-    color: #fff;
-    font-size: 24px;
-    font-weight: 600;
-}
-
-.navbar nav ul {
+    .navbar nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
-    display: flex;
-    gap: 20px;
-}
+    display: flex; /* Tetap flex untuk mempertahankan arah horizontal */
+    gap: 20px; /* Jarak antar elemen */
+    align-items: center;
+    }
 
-.navbar nav ul li a {
+    .navbar nav ul li {
+    list-style: none;
+    }
+
+    .navbar nav ul li a {
     color: #fff;
     font-weight: 400;
-}
-
-.navbar nav ul li a:hover, .navbar nav ul li a.active {
-    color: #f9a825;
-}
-.logo {
-    display: flex;
-    align-items: center; /* Agar logo dan teks sejajar secara vertikal */
-}
-
-.logo img {
-    height: 50px; /* Atur ukuran tinggi logo */
-    margin-right: 10px; /* Beri jarak antara logo dan teks */
-}
-
-.logo span {
-    font-size: 24px; /* Ukuran teks CV. BARUMARTA */
-    font-weight: 600; /* Tebalkan teks */
-    color: #fff; /* Warna teks putih, sesuai dengan navbar */
-}
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+    }
 
 
 .produk {
@@ -182,6 +188,9 @@ a {
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
         gap: 5px;
     }
+    .container {
+        padding: 0 10px;
+        }
     .footer {
         background-color: #6666ff;
         color: #fff;

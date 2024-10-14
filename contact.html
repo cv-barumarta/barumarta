@@ -10,10 +10,13 @@
     body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
-    padding: 0;
+    padding: 0px;
     box-sizing: border-box;
     color: #333;
     background-color: #f4f4f9;
+    background-size: cover;
+    background-position: center;
+    padding-top: 0px;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -28,106 +31,112 @@
     .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 10px;
+    padding: 0 20px;
+    align-content: flex-start;
+    margin-left: 0px;
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+    }
+
+    .logo img {
+        height: 50px;
+        margin-right: 10px;
+    }
+
+    .logo span {
+        font-size: 24px;
+        font-weight: 600;
+        color: #fff;
     }
 
 
     .navbar {
     background-color: #6666ff;
-    padding: 15px 0;
+    padding: 5px 0;
     position: sticky;
     top: 0;
+    left: 0;
     z-index: 1000;
-    }
-
-    .navbar .logo a {
-    color: #fff;
-    font-size: 24px;
-    font-weight: 600;
+    justify-content: space-between;
+    align-items: center;
     }
 
     .navbar nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
-    display: flex;
-    gap: 20px;
+    display: flex; /* Tetap flex untuk mempertahankan arah horizontal */
+    gap: 20px; /* Jarak antar elemen */
+    align-items: center;
+    }
+
+    .navbar nav ul li {
+    list-style: none;
     }
 
     .navbar nav ul li a {
     color: #fff;
     font-weight: 400;
-    }
-
-    .logo {
-    display: flex;
-    align-items: center; /* Agar logo dan teks sejajar secara vertikal */
-    }
-
-    .logo img {
-    height: 50px; /* Atur ukuran tinggi logo */
-    margin-right: 10px; /* Beri jarak antara logo dan teks */
-    }
-
-    .logo span {
-    font-size: 24px; /* Ukuran teks CV. BARUMARTA */
-    font-weight: 600; /* Tebalkan teks */
-    color: #fff; /* Warna teks putih, sesuai dengan navbar */
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
     }
 
 
     .contact {
     padding: 10px 0;
     text-align: center;
-    background-image: url("backgroundall.png"); /* Pastikan path relatif ke gambar */
+    background-image: url("backgroundall.png");
     background-size: cover;
     background-position: center;
     height: 100vh;
     display: flex;
-}
+    }
 
-.contact-header h1 {
+    .contact-header h1 {
     font-size: 36px;
     margin-top: 0px;
     margin-bottom: 0px;
-    color: black; /* Mengatur warna teks menjadi hitam */
-    font-weight: bold; /* Menebalkan teks */
-}
+    color: black;
+    font-weight: bold;
+    }
 
-.contact-header p {
+    .contact-header p {
     font-size: 18px;
     margin-top: 0px;
     margin-bottom: 0px;
     color: #555;
-    color: black; /* Mengatur warna teks menjadi hitam */
-    font-weight: bold; /* Menebalkan teks */
-}
+    color: black;
+    font-weight: bold;
+    }
 
-/* Kontak Content */
-.contact-content {
+
+    .contact-content {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     margin-top: 0px;
     gap: 40px;
     
-}
+    }
 
-/* Info Kontak */
 .contact-info {
     flex: 1;
     margin-top: 0px;
     text-align: left;
-    color: black; /* Mengatur warna teks menjadi hitam */
-    font-weight: bold; /* Menebalkan teks */
+    color: black;
+    font-weight: bold;
 }
 
 .contact-info h2 {
     font-size: 30px;
     margin-top: 0px;
     margin-bottom: 0px;
-    color: black; /* Mengatur warna teks menjadi hitam */
-    font-weight: bold; /* Menebalkan teks */
+    color: black;
+    font-weight: bold;
 }
 
 .contact-info p {
@@ -135,68 +144,68 @@
     line-height: 1.4;
     margin-top: 0px;
     margin-bottom: 0px;
-    color: black; /* Mengatur warna teks menjadi hitam */
-    font-weight: bold; /* Menebalkan teks */
+    color: black;
+    font-weight: bold;
 }
 
-/* Form Kontak */
-.contact-form {
-    flex: 1;
-    text-align: left;
-    color: black; /* Mengatur warna teks menjadi hitam */
-    font-weight: bold; /* Menebalkan teks */
-}
 
-.contact-form h2 {
-    font-size: 30px;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    color: black; /* Mengatur warna teks menjadi hitam */
-    font-weight: bold; /* Menebalkan teks */
-}
+        .contact-form {
+            flex: 1;
+            text-align: left;
+            color: black;
+            font-weight: bold;
+        }
 
-.form-group {
-    margin-top: 0px;
-    margin-bottom: 0px;
-}
+        .contact-form h2 {
+            font-size: 30px;
+            margin-top: 0px;
+            margin-bottom: 0px;
+            color: black;
+            font-weight: bold;
+        }
 
-.form-group label {
-    display: block;
-    font-size: 16px;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    color: black; /* Mengatur warna teks menjadi hitam */
-    font-weight: bold; /* Menebalkan teks */
-}
+        .form-group {
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
 
-.form-group input, .form-group textarea {
-    width: 100%;
-    padding: 10px;
-    margin-top: 0px;
-    font-size: 16px;
-    border-radius: 5px;
-    border: 1px solid #ddd;
-}
+        .form-group label {
+            display: block;
+            font-size: 16px;
+            margin-top: 0px;
+            margin-bottom: 0px;
+            color: black;
+            font-weight: bold;
+        }
 
-.contact-form textarea {
-    resize: vertical;
-}
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 0px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
 
-.btn-primary {
-    padding: 10px 25px;
-    background-color: #f9a825;
-    color: #fff;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    border: none;
-}
+        .contact-form textarea {
+            resize: vertical;
+        }
 
-.btn-primary:hover {
-    background-color: #f57f17;
-}
-.footer {
+        .btn-primary {
+            padding: 10px 25px;
+            background-color: #f9a825;
+            color: #fff;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            border: none;
+        }
+
+        .btn-primary:hover {
+            background-color: #f57f17;
+        }
+        .footer {
             background-color: #6666ff;
             color: #fff;
             text-align: center;
@@ -207,22 +216,144 @@
             margin-top: 0px;
         }
 
+        .whatsapp-float {
+            position: fixed;
+            bottom: 100px;
+            left: 20px;
+            z-index: 100;
+        }
+
+        .whatsapp-float a {
+            display: block;
+            width: 60px;
+            height: 60px;
+            background-color: #25d366;
+            color: #fff;
+            border-radius: 50%;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            transition: background-color 0.3s;
+        }
+
+        .whatsapp-float img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+        }
+
+        .whatsapp-float a:hover {
+            background-color: #20b358;
+        }
+
+        
+        .chatbox-whatsapp {
+            display: none;
+            position: fixed;
+            bottom: 100px;
+            left: 20px;
+            width: 300px;
+            height: 400px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+            z-index: 200;
+            background-color: #fff;
+            flex-direction: column;
+        }
+
+        .chatbox-header {
+            background-color: #25d366;
+            color: white;
+            padding: 10px;
+            font-size: 16px;
+            text-align: center;
+            border-radius: 10px 10px 0 0;
+            position: relative;
+        }
+
+        .close-btn {
+            color: white;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        
+        .chat-messages {
+            flex-grow: 1;
+            padding: 10px;
+            overflow-y: auto;
+            background-color: #f4f4f4;
+        }
+
+        .message-admin {
+            background-color: #e1ffc7;
+            padding: 10px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            text-align: left;
+            font-size: 14px;
+            width: auto;
+            max-width: 80%;
+        }
+
+        .message-user {
+            background-color: #d2e9ff;
+            padding: 10px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            text-align: left;
+            font-size: 14px;
+            width: auto;
+            max-width: 80%;
+            align-self: flex-end;
+        }
+
+        
+        .input-message {
+            display: flex;
+            padding: 1px;
+            border-top: 0px solid #ccc;
+            background-color: white;
+        }
+
+        .input-message input {
+            flex-grow: 1;
+            padding: 8px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            margin-right: 0px;
+            
+        }
+
+        .input-message button {
+            flex-grow: 1;
+            padding: 8px 0px;
+            background-color: #25d366;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+
 
 
 @media (max-width: 768px) {
         .navbar {
-            padding: 4px; /* Kurangi padding di layar kecil */
+            padding: 4px; 
         }
 
         .navbar nav ul {
-            gap: 10px; /* Kurangi jarak antar item */
-            justify-content: center; /* Pusatkan elemen navbar */
-            flex-direction: row; /* Tetap horizontal di layar kecil */
+            gap: 10px; 
+            justify-content: center;
+            flex-direction: row; 
         }
 
         .navbar nav ul li a {
-            font-size: 14px; /* Sesuaikan ukuran font untuk layar kecil */
-            padding: 5px 1px; /* Kurangi padding untuk menjaga proporsi */
+            font-size: 14px;
+            padding: 5px 1px;
         }
 
         
@@ -234,7 +365,7 @@
         .contact {
         padding: 10px 0;
         text-align: center;
-        background-image: url("backgroundall.png"); /* Pastikan path relatif ke gambar */
+        background-image: url("backgroundall.png");
         background-size: cover;
         background-position: center;
         height: 75vh;
@@ -242,18 +373,18 @@
         }
 
     .contact-header h1 {
-        font-size: 18px;
-        margin-bottom: 5px;
-        color: black; /* Mengatur warna teks menjadi hitam */
-        font-weight: bold; /* Menebalkan teks */
+        font-size: 16px;
+        margin-bottom: 2px;
+        color: black;
+        font-weight: bold;
     }
 
     .contact-header p {
-        font-size: 14px;
-        margin-bottom: 5px;
+        font-size: 12px;
+        margin-bottom: 2px;
         color: #555;
-        color: black; /* Mengatur warna teks menjadi hitam */
-        font-weight: bold; /* Menebalkan teks */
+        color: black;
+        font-weight: bold;
     }
 
 
@@ -269,23 +400,23 @@
     .contact-info {
         flex: 1;
         text-align: left;
-        color: black; /* Mengatur warna teks menjadi hitam */
-        font-weight: bold; /* Menebalkan teks */
+        color: black;
+        font-weight: bold;
     }
 
     .contact-info h2 {
-        font-size: 18px;
+        font-size: 16px;
         margin-bottom: 0px;
-        color: black; /* Mengatur warna teks menjadi hitam */
-        font-weight: bold; /* Menebalkan teks */
+        color: black;
+        font-weight: bold;
     }
 
     .contact-info p {
-        font-size: 14px;
-        line-height: 1.2;
+        font-size: 12px;
+        line-height: 1.0;
         margin-bottom: 0px;
-        color: black; /* Mengatur warna teks menjadi hitam */
-        font-weight: bold; /* Menebalkan teks */
+        color: black;
+        font-weight: bold;
     }
 
 
@@ -295,10 +426,10 @@
     }
 
     .contact-form h2 {
-        font-size: 18px;
+        font-size: 16px;
         margin-bottom: 0px;
-        color: black; /* Mengatur warna teks menjadi hitam */
-        font-weight: bold; /* Menebalkan teks */
+        color: black;
+        font-weight: bold;
     }
 
     .form-group {
@@ -308,17 +439,17 @@
 
     .form-group label {
         display: block;
-        font-size: 14px;
+        font-size: 12px;
         margin-bottom: 0px;
-        color: black; /* Mengatur warna teks menjadi hitam */
-        font-weight: bold; /* Menebalkan teks */
+        color: black;
+        font-weight: bold;
     }
 
     .form-group input, .form-group textarea {
         width: 90%;
         padding: 5px;
-        font-size: 14px;
-        border-radius: 5px;
+        font-size: 12px;
+        border-radius: 2px;
         border: 1px solid #ddd;
     }
 
@@ -330,8 +461,8 @@
         padding: 5px 15px;
         background-color: #f9a825;
         color: #fff;
-        border-radius: 5px;
-        font-size: 14px;
+        border-radius: 2px;
+        font-size: 12px;
         cursor: pointer;
         transition: background-color 0.3s ease;
         border: none;
@@ -347,8 +478,107 @@
         padding: 5px 0;
         margin-top: 0px;
         }
+        .container {
+            padding: 0 10px;
+        }
         .footer p {
         margin-top: 0px;
+        }
+        .whatsapp-float a {
+                width: 30px;
+                height: 30px;
+            }
+        .chatbox-whatsapp {
+            display: none;
+            position: fixed;
+            bottom: 80px;
+            left: 20px;
+            width: 150px;
+            height: 250px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+            z-index: 200;
+            background-color: #fff;
+            flex-direction: column;
+        }
+
+        .chatbox-header {
+            background-color: #25d366;
+            color: white;
+            padding: 10px;
+            font-size: 10px;
+            text-align: center;
+            border-radius: 3px 3px 0 0;
+            position: relative;
+        }
+
+        .close-btn {
+            color: white;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        
+        .chat-messages {
+            flex-grow: 1;
+            padding: 2px;
+            overflow-y: auto;
+            background-color: #f4f4f4;
+        }
+
+        .message-admin {
+            background-color: #e1ffc7;
+            padding: 2px;
+            border-radius: 2px;
+            margin-bottom: 2px;
+            text-align: left;
+            font-size: 10px;
+            width: auto;
+            max-width: 80%;
+        }
+
+        .message-user {
+            background-color: #d2e9ff;
+            padding: 2px;
+            border-radius: 2px;
+            margin-bottom: 4px;
+            text-align: left;
+            font-size: 10px;
+            width: auto;
+            max-width: 80%;
+            align-self: flex-end;
+        }
+
+        
+        .input-message {
+            align-items: center;
+            display: flex;
+            padding: 1px;
+            border-top: 0px solid #ccc;
+            background-color: white;
+        }
+
+        .input-message input {
+            width: 100%; /* Adjust input to take full width */
+            padding: 2px;
+            border-radius: 1px;
+            border: 1px solid #ccc;
+            margin-right: 0px;
+            box-sizing: border-box;
+            
+        }
+
+        .input-message button {
+            flex-grow: 1;
+            padding: 2px 0px;
+            background-color: #25d366;
+            color: white;
+            border: none;
+            border-radius: 1px;
+            cursor: pointer;
         }
 }
 </style>
@@ -385,7 +615,7 @@
                     <h2>Informasi Kontak</h2>
                     <p><strong>Alamat:</strong> Perumahan Korpri Badran
                         Blok D Jl. Dahlia IV No. 254 Rt. 04 RW 09 Kranggan, Kab.Temanggung, Indonesia</p>
-                    <p><strong>Email:</strong> info@barumarta.com</p>
+                    <p><strong>Email:</strong> cvbarumarta@gmail.com</p>
                     <p><strong>Telepon:</strong> (+62)8783-4545-666</p>
                     <p><strong>Jam Operasional:</strong> Senin - Jumat, 08.00 - 17.00</p>
                 </div>
@@ -408,6 +638,7 @@
                         </div>
                         <button type="submit" class="btn-primary">Kirim Pesan</button>
                     </form>
+                    
                 </div>
             </div>
         </div>
@@ -419,6 +650,26 @@
             <p>&copy; 2024 CV. BARUMARTA. All rights reserved.</p>
         </div>
     </footer>
+    <div class="whatsapp-float">
+        <a href="javascript:void(0);" onclick="openChatbox()">
+            <img src="whatsup.png" alt="Customer Service">
+        </a>
+    </div>
+
+    <div id="chatboxWhatsApp" class="chatbox-whatsapp">
+        <div class="chatbox-header">
+            WhatsApp Chat
+            <span class="close-btn" onclick="closeChatbox()">&times;</span>
+        </div>
+        <div class="chat-messages" id="chatMessages">
+        </div>
+        <div class="input-message">
+            <input type="text" id="userMessage" placeholder="Ketik pesan Anda...">
+        </div>
+        <div class="input-message">
+            <button onclick="sendMessage()">Kirim</button>
+        </div>
+    </div>
     
     <script>
         document.addEventListener('keydown', function(e) {
@@ -431,6 +682,57 @@
         document.addEventListener('contextmenu', function(e) {
             e.preventDefault();
         });
+    </script>
+    <script>
+        function showChatbox() {
+            document.getElementById('chatboxWhatsApp').style.display = 'flex';
+            if (chatMessages.innerHTML.trim() === "") {
+                chatMessages.innerHTML = '<div class="message-admin">Selamat datang di CV. BARUMARTA, ada yang bisa kami bantu?</div>';
+            }
+        }
+
+        // Panggil fungsi showChatbox setelah 25 detik
+        setTimeout(showChatbox, 10000);
+
+        function openChatbox() {
+            var chatbox = document.getElementById('chatboxWhatsApp');
+            var chatMessages = document.getElementById('chatMessages');
+
+            // Tampilkan kotak chat
+            chatbox.style.display = 'flex';
+
+            // Tampilkan pesan dari admin jika belum ada pesan
+            if (chatMessages.innerHTML.trim() === "") {
+                chatMessages.innerHTML = '<div class="message-admin">Selamat datang di CV. BARUMARTA, ada yang bisa kami bantu?</div>';
+            }
+        }
+
+        // Fungsi untuk menutup chatbox
+        function closeChatbox() {
+            document.getElementById('chatboxWhatsApp').style.display = 'none';
+        }
+
+        // Fungsi untuk mengirim pesan dari pengguna
+        function sendMessage() {
+            var userMessage = document.getElementById('userMessage').value;
+            var chatMessages = document.getElementById('chatMessages');
+
+            // Cek jika pengguna memasukkan pesan
+            if (userMessage.trim() !== "") {
+                // Tambahkan pesan pengguna ke dalam kotak pesan
+                var userMessageHTML = '<div class="message-user">' + userMessage + '</div>';
+                chatMessages.innerHTML += userMessageHTML;
+
+                // Kosongkan input pesan setelah terkirim
+                document.getElementById('userMessage').value = "";
+
+                // Secara otomatis scroll ke bawah saat ada pesan baru
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+            }
+        }
+        
+
+
     </script>
 
 </body>

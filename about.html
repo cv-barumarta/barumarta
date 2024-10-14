@@ -31,40 +31,11 @@ a {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
-}
+    align-content: flex-start;
+    margin-left: 0px;
+    }
 
-.navbar {
-    background-color: #6666ff;
-    padding: 15px 0;
-    position: sticky;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.navbar .logo a {
-    color: #fff;
-    font-size: 24px;
-    font-weight: 600;
-}
-
-.navbar nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    gap: 20px;
-}
-
-.navbar nav ul li a {
-    color: #fff;
-    font-weight: 400;
-}
-
-
-.logo {
+    .logo {
         display: flex;
         align-items: center;
     }
@@ -78,6 +49,39 @@ a {
         font-size: 24px;
         font-weight: 600;
         color: #fff;
+    }
+
+
+    .navbar {
+    background-color: #6666ff;
+    padding: 5px 0;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    justify-content: space-between;
+    align-items: center;
+    }
+
+    .navbar nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Tetap flex untuk mempertahankan arah horizontal */
+    gap: 20px; /* Jarak antar elemen */
+    align-items: center;
+    }
+
+    .navbar nav ul li {
+    list-style: none;
+    }
+
+    .navbar nav ul li a {
+    color: #fff;
+    font-weight: 400;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
     }
 
 /* Tentang Kami Section */
@@ -410,7 +414,9 @@ a {
     list-style: disc;
 }
 
-
+    .container {
+            padding: 0 10px;
+        }
 
     .footer p {
         margin-top: 0px;
