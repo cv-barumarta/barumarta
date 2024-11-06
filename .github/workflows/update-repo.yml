@@ -3,7 +3,7 @@ name: Update Repository Automatically
 on:
   push:
     branches:
-      - master  # atau ganti dengan main jika itu nama branch Anda
+      - master
 
 jobs:
   update_repo:
@@ -16,5 +16,5 @@ jobs:
         run: |
           git add .
           git commit -m "Automatic update" || echo "No changes to commit"
-          git push origin master  # pastikan branch sesuai dengan branch di atas
+          git push origin master
 
